@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./App.css";
+import "../styles/MatrixCalculator.css";
 
 function MatrixCalculator() {
   
@@ -52,7 +52,7 @@ function MatrixCalculator() {
     matrices.every(
       (m) =>
         Number(m.rows) === Number(matrices[0].rows) &&
-        Number(m.cols) === Number(matrices[0].cols]) &&
+        Number(m.cols) === Number(matrices[0].cols) &&
         Number(m.rows) > 0 &&
         Number(m.cols) > 0
     );
