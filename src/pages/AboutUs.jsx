@@ -30,9 +30,9 @@ function AboutUs() {
           </p>
 
           <div className="member-cards-wrapper">
-            <MemberCards member={{name: "Keana Clarisse", role: "Frontend Developer", pfp: "/assets/keana.jpg", github: "#", fb: "#"}} />
+            <MemberCards member={{name: "Keana Clarisse", role: "Frontend Developer", pfp: "/assets/keana.jpg", github: "https://github.com/KCnsbd", fb: "#"}} />
             <MemberCards member={{name: "Louie Garcia", role: "Frontend Developer", pfp: "/assets/louie.jpg", github: "#", fb: "#"}} />
-            <MemberCards member={{name: "Voltaire Punzalan", role: "Documentation", pfp: "/assets/keana.jpg", github: "#", fb: "#"}} />
+            <MemberCards member={{name: "Voltaire Punzalan", role: "Documentation", pfp: "/assets/keana.jpg", github: "https://github.com/IpreferV", fb: "#"}} />
           </div>
         </div>
 
