@@ -1,0 +1,33 @@
+.about-team-container {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.about-team-container h2 {
+  font-size: 1.6rem;
+  color: #1e40af;
+  margin-bottom: 12px;
+}
+
+.about-team-container p {
+  font-size: 1rem;
+  color: #555;
+  max-width: 750px;
+  margin: 0 auto 25px auto;
+}
+
+.member-cards-wrapper {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.member-cards-wrapper .card {
+  transition: transform 0.2s;
+}
+
+.member-cards-wrapper .card:hover {
+  transform: translateY(-3px);
+}

@@ -1,0 +1,13 @@
+.footer {
+  width: 100vw; 
+  padding: 2rem 1rem;
+  background: linear-gradient(to right, #1a1f36, #282c34);
+  color: #fff;
+  text-align: center;
+  font-size: 0.95rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  box-sizing: border-box;
+
+  position: relative;
+  left: 0;
+}
