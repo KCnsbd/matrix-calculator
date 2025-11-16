@@ -2,13 +2,12 @@ import { useState } from "react";
 import "../styles/MatrixCalculator.css";
 
 function MatrixCalculator() {
-  
   const [matrixCount, setMatrixCount] = useState(2);
   const [matrices, setMatrices] = useState([]);
   const [operation, setOperation] = useState(null);
   const [result, setResult] = useState(null);
 
-  // generate matrices
+  // Generate matrices
   const generateMatrices = () => {
     const arr = [];
     for (let i = 0; i < matrixCount; i++) {
@@ -19,7 +18,7 @@ function MatrixCalculator() {
     setOperation(null);
   };
 
-  // size update
+  // Update size
   const updateSize = (index, rows, cols) => {
     const updated = [...matrices];
     const r = Number(rows) || 0;
@@ -27,7 +26,6 @@ function MatrixCalculator() {
     updated[index].rows = rows;
     updated[index].cols = cols;
 
-    // if valid size
     if (r > 0 && c > 0) {
       updated[index].values = Array.from({ length: r }, (_, rIndex) =>
         Array.from(
@@ -39,14 +37,14 @@ function MatrixCalculator() {
     setMatrices(updated);
   };
 
-  // input
+  // Update value
   const updateValue = (m, r, c, value) => {
     const updated = [...matrices];
     updated[m].values[r][c] = value;
     setMatrices(updated);
   };
 
-  // check operations
+  // Check operations
   const canAddSubtractDivide =
     matrices.length > 1 &&
     matrices.every(
@@ -67,7 +65,7 @@ function MatrixCalculator() {
           Number(m.cols) > 0
     );
 
-  // operation logic
+  // Perform operation
   const performOperation = (op) => {
     let res = null;
     const mats = matrices.map((m) =>
@@ -87,13 +85,12 @@ function MatrixCalculator() {
     }
 
     if (op === "Multiply") {
-      
-        const multiplyTwo = (A, B) => {
+      const multiplyTwo = (A, B) => {
         const R = A.length;
         const C = B[0].length;
         const K = B.length;
         const result = Array.from({ length: R }, () => Array(C).fill(0));
-          
+
         for (let r = 0; r < R; r++) {
           for (let c = 0; c < C; c++) {
             for (let k = 0; k < K; k++) {
@@ -108,7 +105,7 @@ function MatrixCalculator() {
 
     if (op === "Divide") {
       res = mats.reduce((A, B) =>
-          A.map((row, r) =>
+        A.map((row, r) =>
           row.map((val, c) => (B[r][c] !== 0 ? val / B[r][c] : "∞"))
         )
       );
@@ -118,7 +115,7 @@ function MatrixCalculator() {
     setResult(res);
   };
 
-  // reset
+  // Reset
   const resetAll = () => {
     setMatrices([]);
     setMatrixCount(2);
@@ -126,30 +123,31 @@ function MatrixCalculator() {
     setResult(null);
   };
 
-  //UI
   return (
-    <div>
+    <div className="container">
       <h1>Matrix Calculator</h1>
 
       <div className="main-content">
         <h2>Welcome to the Matrix Calculator!</h2>
-        <p>
-          This application allows you to perform various matrix operations
-          with ease.
-        </p>
+        <p>This application allows you to perform various matrix operations with ease.</p>
       </div>
 
-      {/* number of matrices */}
-      <label>Number of matrices:</label>
-      <input
-        type="number"
-        value={matrixCount || ""}
-        onChange={(e) => setMatrixCount(Number(e.target.value))}
-        placeholder="e.g. 2"
-      />
-      <button onClick={generateMatrices}>Generate</button>
+      {/* Number of matrices */}
+      <div>
+        <label>Number of matrices:</label>
+        <input
+          type="number"
+          value={matrixCount || ""}
+          onChange={(e) => setMatrixCount(Number(e.target.value))}
+          placeholder="e.g. 2"
+          className="countInput"
+        />
+        <button className="button" onClick={generateMatrices}>
+          Generate
+        </button>
+      </div>
 
-      {/* input UI */}
+      {/* Input UI */}
       {matrices.map((m, idx) => (
         <div key={idx} className="matrixBlock">
           <h3>Matrix {idx + 1}</h3>
@@ -159,6 +157,7 @@ function MatrixCalculator() {
               value={m.rows}
               placeholder="Rows"
               onChange={(e) => updateSize(idx, e.target.value, m.cols)}
+              className="sizeInput"
             />
             <span style={{ margin: "0 5px" }}>x</span>
             <input
@@ -166,6 +165,7 @@ function MatrixCalculator() {
               value={m.cols}
               placeholder="Cols"
               onChange={(e) => updateSize(idx, m.rows, e.target.value)}
+              className="sizeInput"
             />
           </div>
 
@@ -178,6 +178,7 @@ function MatrixCalculator() {
                     type="number"
                     value={val}
                     onChange={(e) => updateValue(idx, r, c, e.target.value)}
+                    className="cell"
                   />
                 ))}
               </div>
@@ -186,10 +187,11 @@ function MatrixCalculator() {
         </div>
       ))}
 
-      {/*operation buttons*/}
+      {/* Operation buttons */}
       <label>Operations:</label>
       <div className="opRow">
         <button
+          className={`opButton ${!canAddSubtractDivide ? "disabled" : ""}`}
           disabled={!canAddSubtractDivide}
           onClick={() => performOperation("Add")}
         >
@@ -197,6 +199,7 @@ function MatrixCalculator() {
         </button>
 
         <button
+          className={`opButton ${!canAddSubtractDivide ? "disabled" : ""}`}
           disabled={!canAddSubtractDivide}
           onClick={() => performOperation("Subtract")}
         >
@@ -204,6 +207,7 @@ function MatrixCalculator() {
         </button>
 
         <button
+          className={`opButton ${!canMultiply ? "disabled" : ""}`}
           disabled={!canMultiply}
           onClick={() => performOperation("Multiply")}
         >
@@ -211,6 +215,7 @@ function MatrixCalculator() {
         </button>
 
         <button
+          className={`opButton ${!canAddSubtractDivide ? "disabled" : ""}`}
           disabled={!canAddSubtractDivide}
           onClick={() => performOperation("Divide")}
         >
@@ -218,10 +223,12 @@ function MatrixCalculator() {
         </button>
       </div>
 
-      {/* reset button */}
-      <button onClick={resetAll}>Reset</button>
+      {/* Reset button */}
+      <button className="button" onClick={resetAll}>
+        Reset
+      </button>
 
-      {/* result */}
+      {/* Result */}
       {result && (
         <div className="resultBox">
           <h3>Result ({operation})</h3>
