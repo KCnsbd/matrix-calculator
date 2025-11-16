@@ -7,7 +7,7 @@ function Header() {
             <Link to="/">Matrix Calculator</Link>
         </div>
         <div className="header-links">
-            <Link to="/" className="nav-link">Home</Link>
+            <Link to="/matrix-calculator/" className="nav-link">Home</Link>
             <Link to="/lessons" className="nav-link">Lessons</Link>
             <Link to="/about-us" className="nav-link">About Us</Link>
         </div>

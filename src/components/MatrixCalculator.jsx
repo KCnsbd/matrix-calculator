@@ -1,4 +1,5 @@
 import { useState } from "react";
+import MatrixUnifiedVisualizer from "./MatrixUnifiedVisualizer";
 import "../styles/MatrixCalculator.css";
 
 function MatrixCalculator() {
@@ -245,6 +246,9 @@ function MatrixCalculator() {
           </div>
         </div>
       )}
+
+      {/* Visualizer */}
+      {matrices[0] && <MatrixUnifiedVisualizer matrix={matrices[0].values} />}
     </div>
   );
 }

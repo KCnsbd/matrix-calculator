@@ -1,101 +1,143 @@
+/* =========================
+   GENERAL LAYOUT & TYPOGRAPHY
+========================= */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f7fa;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
 .container {
-  padding: 20px;
+  padding: 30px 20px;
+  max-width: 900px;
+  margin: auto;
   text-align: center;
 }
 
-.countInput {
+/* =========================
+   INPUTS
+========================= */
+.countInput, .sizeInput {
   width: 60px;
+  height: 40px;
   text-align: center;
-  height: 35px;
   margin: 5px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: border 0.2s, box-shadow 0.2s;
+}
+
+.countInput:focus, .sizeInput:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0,123,255,0.5);
+  outline: none;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+.button, .opButton {
+  font-weight: bold;
+  padding: 10px 16px;
+  margin: 8px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
 }
 
 .button {
   background-color: #007bff;
   color: white;
-  font-weight: bold;
-  padding: 8px 12px;
-  margin: 10px;
-  border-radius: 6px;
-  border: none;
-  cursor: pointer;
 }
 
-.matrixBlock {
-  background-color: #efefef;
-  padding: 12px;
-  width: 90%;
-  margin: 20px auto;
-  border-radius: 10px;
-  text-align: center;
-}
-
-.sizeRow {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 10px;
-}
-
-.sizeInput {
-  width: 50px;
-  text-align: center;
-}
-
-.matrixScroll {
-  overflow-x: auto;
-  display: inline-block;
-  margin-top: 5px;
-}
-
-.row {
-  display: flex;
-  justify-content: center;
-}
-
-.cell {
-  width: 50px;
-  height: 35px;
-  text-align: center;
-  margin: 3px;
-}
-
-.opRow {
-  margin-top: 15px;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+.button:hover {
+  background-color: #0056b3;
 }
 
 .opButton {
   background-color: #28a745;
   color: white;
-  font-weight: bold;
-  padding: 8px 12px;
-  margin: 5px;
-  border-radius: 6px;
-  border: none;
-  cursor: pointer;
+}
+
+.opButton:hover {
+  background-color: #1e7e34;
 }
 
 .disabled {
   background-color: #9ccc9c;
-  opacity: 0.4;
+  opacity: 0.5;
   cursor: not-allowed;
 }
 
-.resultBox {
-  background-color: #d8ffd8;
-  padding: 12px;
-  width: 90%;
-  margin: 20px auto;
-  border-radius: 10px;
+/* =========================
+   MATRIX BLOCKS
+========================= */
+.matrixBlock, .resultBox {
+  display: inline-block;       /* Shrinks to fit content */
+  background-color: #ffffff;
+  padding: 20px 25px;          /* Extra space around the matrix */
+  margin: 1rem;           /* Center on page */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+  overflow-x: auto;
+  min-width: 100px;            /* Prevent it from being too small */
+}
+
+.matrixScroll {
+  display: inline-block;
+  margin-top: 10px;
+}
+
+/* =========================
+   MATRIX ROWS & CELLS
+========================= */
+.sizeRow, .row, .opRow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+.cell, .resultCell {
+  width: 60px;
+  height: 40px;
+  margin: 4px;
+  text-align: center;
+  font-size: 16px;
+  border-radius: 6px;
+}
+
+.cell {
+  border: 1px solid #ccc;
 }
 
 .resultCell {
-  border: 1px solid #000;
-  min-width: 50px;
-  padding: 8px;
-  margin: 2px;
-  display: inline-block;
+  border: 1px solid #007bff;
+  background-color: #e6f4ff;
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 600px) {
+  .cell, .resultCell {
+    width: 45px;
+    height: 35px;
+    font-size: 14px;
+  }
+  
+  .button, .opButton {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
 }
