@@ -40,31 +40,33 @@
   padding: 10px 16px;
   margin: 8px;
   border-radius: 8px;
-  border: none;
+  border: solid 1px #222222;
   cursor: pointer;
   transition: all 0.2s;
 }
 
 .button {
-  background-color: #007bff;
-  color: white;
+  background-color: white;
+  color: #222222;
 }
 
 .button:hover {
-  background-color: #0056b3;
+  background-color: white;
+  color: #0049bd;
 }
 
 .opButton {
-  background-color: #28a745;
-  color: white;
+  background-color: white;
+  color: #222222;
 }
 
 .opButton:hover {
-  background-color: #1e7e34;
+  background-color: #222222;
+  color: #ffffff;
 }
 
 .disabled {
-  background-color: #9ccc9c;
+  background-color: white;
   opacity: 0.5;
   cursor: not-allowed;
 }

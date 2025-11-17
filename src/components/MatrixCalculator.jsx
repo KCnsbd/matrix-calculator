@@ -189,7 +189,7 @@ function MatrixCalculator() {
       ))}
 
       {/* Operation buttons */}
-      <label>Operations:</label>
+      <div>Operations:</div>
       <div className="opRow">
         <button
           className={`opButton ${!canAddSubtractDivide ? "disabled" : ""}`}

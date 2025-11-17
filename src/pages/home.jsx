@@ -31,7 +31,7 @@ function Home() {
               to represent and manipulate data.
             </p>
 
-            <Link to="/Lessons">
+            <Link to="/matrix-calculator/Lessons">
               <button className="learn-more-button">Learn More</button>
             </Link>
           </section>

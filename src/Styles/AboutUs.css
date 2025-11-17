@@ -2,7 +2,7 @@
   font-size: 2.5rem;
   margin-bottom: 10px;
   margin-top: 3rem;
-  color: #1e3a8a;
+  color: #222;
 }
 
 .Heading-section p {
@@ -41,7 +41,7 @@
 /* Icon container */
 .feature-icon {
   font-size: 36px;          /* default icon size */
-  color: #1e40af; margin-bottom: 12px;
+  color: #555; margin-bottom: 12px;
 }
 
 /* Feature title */
@@ -65,7 +65,7 @@
 
 .about-team-container h1 {
   font-size: 2.5rem;
-  color: #1e40af;
+  color: #222;
   margin-bottom: 12px;
 }
 
