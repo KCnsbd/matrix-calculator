@@ -1,10 +1,70 @@
+.Heading-section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  margin-top: 3rem;
+  color: #1e3a8a;
+}
+
+.Heading-section p {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+/* Each feature card */
+.features-wrapper {
+  display: flex;
+  flex-wrap: wrap;           /* allows wrapping on small screens */
+  justify-content: center;   /* center the row horizontally */
+  gap: 30px;                 /* space between feature cards */
+  margin: 40px 0;
+}
+
+/* Individual feature cards */
+.features-container {
+  flex: 1 1 250px;           /* grow/shrink, min width 250px */
+  max-width: 220px;          /* optional max width */
+  text-align: center;
+  padding: 20px;
+  border-radius: 12px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for feature cards */
+.features-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  display: inline-block;
+}
+
+/* Icon container */
+.feature-icon {
+  font-size: 36px;          /* default icon size */
+  color: #1e40af; margin-bottom: 12px;
+}
+
+/* Feature title */
+.features-container h5 {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+/* Feature description */
+.features-container p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.4;
+}
+
 .about-team-container {
-  margin-top: 30px;
+  margin-top: 5rem;
   text-align: center;
 }
 
-.about-team-container h2 {
-  font-size: 1.6rem;
+.about-team-container h1 {
+  font-size: 2.5rem;
   color: #1e40af;
   margin-bottom: 12px;
 }

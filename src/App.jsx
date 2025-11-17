@@ -13,8 +13,8 @@ function App() {
     <main className="main-content">
       <Routes> 
         <Route path="/matrix-calculator/" element={<Home />} />
-        <Route path="/about-us" element={<AboutUs />} />
-        <Route path="/lessons" element={<Lessons />} />
+        <Route path="/matrix-calculator/about-us" element={<AboutUs />} />
+        <Route path="/matrix-calculator/lessons" element={<Lessons />} />
       </Routes>
     </main>
     </div>

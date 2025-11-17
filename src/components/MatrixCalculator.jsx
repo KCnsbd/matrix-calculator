@@ -129,11 +129,11 @@ function MatrixCalculator() {
       <h1>Matrix Calculator</h1>
 
       <div className="main-content">
-        <h2>Welcome to the Matrix Calculator!</h2>
         <p>This application allows you to perform various matrix operations with ease.</p>
       </div>
 
       {/* Number of matrices */}
+      <div className="calculator-wrapper">
       <div>
         <label>Number of matrices:</label>
         <input
@@ -228,6 +228,7 @@ function MatrixCalculator() {
       <button className="button" onClick={resetAll}>
         Reset
       </button>
+      </div>
 
       {/* Result */}
       {result && (

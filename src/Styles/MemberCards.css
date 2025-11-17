@@ -22,7 +22,7 @@
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: 15px;
-  border: 2px solid #1e40af; 
+  border: 3px solid #1e40af; 
 }
 
 .member-info h3 {
@@ -39,17 +39,14 @@
 
 .member-links a {
   display: inline-block;
-  margin: 5px 8px;
   padding: 5px 10px;
   font-size: 0.9rem;
   color: #1e40af;
   text-decoration: none;
   border-radius: 6px;
-  border: 1px solid #1e40af;
   transition: all 0.2s;
 }
 
 .member-links a:hover {
-  background-color: #1e40af;
-  color: #fff;
+  color: #2563eb;
 }

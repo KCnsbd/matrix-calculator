@@ -4,12 +4,12 @@ import "../styles/Header.css";
 function Header() {
   return <nav className="header-section">
         <div className="header-brand">
-            <Link to="/">Matrix Calculator</Link>
+            <Link to="/">Matrix Laboratories</Link>
         </div>
         <div className="header-links">
             <Link to="/matrix-calculator/" className="nav-link">Home</Link>
-            <Link to="/lessons" className="nav-link">Lessons</Link>
-            <Link to="/about-us" className="nav-link">About Us</Link>
+            <Link to="/matrix-calculator/lessons" className="nav-link">Lessons</Link>
+            <Link to="/matrix-calculator/about-us" className="nav-link">About Us</Link>
         </div>
     </nav>;
 }

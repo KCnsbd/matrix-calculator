@@ -1,10 +1,29 @@
 /* =========================
    PAGE CONTAINER & MAIN CONTENT
 ========================= */
+
 .page-container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
+}
+
+.Heading-section {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.Heading-section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  
+  margin-top: 3rem;
+  color: #1e3a8a;
+}
+
+.Heading-section p {
+  font-size: 1.1rem;
+  color: #555;
 }
 
 .main-content {
@@ -12,16 +31,48 @@
   flex-direction: column;
   gap: 40px;
 }
-
-/* =========================
-   CARD STYLING
-========================= */
+/* Wrapper card */
 .matrix-card {
-  background-color: #fff;
-  padding: 25px 30px;
+  background-color: #ffffff;
   border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  padding: 25px 30px;
+  max-width: 900px;
+  width: 100%;
 }
+
+/* Section header */
+.matrix-overview-header h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #222;
+  font-weight: 600;
+  text-align: left; /* or center if you prefer */
+}
+
+/* Paragraph styling */
+.matrix-overview-section p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #444;
+  margin-top: 0;
+}
+
+/* Optional responsive tweak */
+@media (max-width: 600px) {
+  .matrix-card {
+    padding: 20px;
+  }
+
+  .matrix-overview-header h2 {
+    font-size: 1.5rem;
+  }
+
+  .matrix-overview-section p {
+    font-size: 0.95rem;
+  }
+}
+
 /* =========================
    NOTE SECTION CONTAINER
 ========================= */
@@ -30,6 +81,7 @@
   padding: 25px 30px;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  max-width: 900px;
   margin-bottom: 40px;
   text-align: center; /* center text and operation containers */
 }
@@ -43,7 +95,7 @@
   border: 1px solid #e0e0e0;
   border-radius: 10px;
   background-color: #f9f9f9;
-  max-width: 800px; /* limit width so it's not too wide */
+  max-width: 700px; 
   text-align: center; /* center the matrices and text */
 }
 
