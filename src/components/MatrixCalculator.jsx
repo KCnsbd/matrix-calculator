@@ -249,7 +249,16 @@ function MatrixCalculator() {
       )}
 
       {/* Visualizer */}
-      {matrices[0] && <MatrixUnifiedVisualizer matrix={matrices[0].values} />}
+{result && (
+  <MatrixUnifiedVisualizer
+    matrix={result}
+    // optional: for 2D/3D transformation, you can pass an input vector
+    inputVector={
+      result.length === 2 ? [1, 1] : result.length === 3 ? [1, 1, 1] : undefined
+    }
+  />
+)}
+
     </div>
   );
 }
