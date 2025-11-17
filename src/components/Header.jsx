@@ -4,7 +4,7 @@ import "../styles/Header.css";
 function Header() {
   return <nav className="header-section">
         <div className="header-brand">
-            <Link to="/">Matrix Laboratories</Link>
+            <Link to="/">Grayscale Labs</Link>
         </div>
         <div className="header-links">
             <Link to="/matrix-calculator/" className="nav-link">Home</Link>

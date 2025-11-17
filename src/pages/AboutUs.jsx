@@ -17,7 +17,7 @@ function AboutUs() {
         <div className="Heading-section">
           <h1>About This Website</h1>
           <p>
-            This website was created by Computer Science students from FAITH Colleges as their final requirement for Linear Algebra. It provides an interactive platform for performing and visualizing matrix operations, making the study of matrices more accessible and engaging.
+            Grayscale Labs was created by Computer Science students from FAITH Colleges as their final requirement for Linear Algebra. It provides an interactive platform for performing and visualizing matrix operations, making the study of matrices more accessible and engaging.
           </p>
         </div>
 
@@ -53,7 +53,7 @@ function AboutUs() {
           <p>"Meet the talented individuals behind the project, each contributing their unique skills and expertise to bring it to life."</p>
 
           <div className="member-cards-wrapper">
-            <MemberCards member={{name: "Keana Clarisse", role: "Frontend Developer", pfp: keanaImg, github: "https://github.com/KCnsbd", fb: "https://github.com/GarciaL-777"}} />
+            <MemberCards member={{name: "Keana Clarisse", role: "Frontend Developer", pfp: keanaImg, github: "https://github.com/KCnsbd", fb: "https://www.facebook.com/keana.consebido"}} />
             <MemberCards member={{name: "Louie Garcia", role: "Frontend Developer", pfp: louieImg, github: "https://github.com/GarciaL-777", fb: "https://www.facebook.com/lx.louie"}} />
             <MemberCards member={{name: "Voltaire Punzalan", role: "Documentation", pfp: voltImg, github: "https://github.com/IpreferV", fb: "https://www.facebook.com/voltairejan.punzalan"}} />
           </div>

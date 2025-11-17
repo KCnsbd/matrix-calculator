@@ -14,7 +14,7 @@ function Home() {
         <main className="main-content">
 
           <div className="Heading-section">
-            <h1>Welcome to the Matrix Laboratories!</h1>
+            <h1>Welcome to the Grayscale Labs!</h1>
             <p>
               Explore the world of matrices with our interactive calculator and comprehensive lessons. Whether you're a student or a professional, our tools are designed to help you understand and perform matrix operations with ease.
             </p>
