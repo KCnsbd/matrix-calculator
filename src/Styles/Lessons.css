@@ -82,7 +82,76 @@ html {
   color: #1e40af;
 }
 
+.lesson-content-section h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  color: #2563eb;
+}
+
+.lesson-content-section h4 {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+  color: #3b82f6;
+}
+
 .lesson-content-section p {
   font-size: 1rem;
   color: #555;
+}
+
+/* ============================
+   MATRIX + EQUATION LAYOUT
+============================ */
+
+/* Wrapper that makes matrices & symbols align horizontally */
+.matrix-equation {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;     /* responsive: lets them move to next row on small screens */
+  margin: 15px 0;
+  justify-content: center;
+}
+
+/* Operation signs: +  -  ×  = */
+.operation-sign {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #555;
+  margin: 0 8px;
+}
+
+
+/* ============================
+   MatrixSVG Default Sizing
+============================ */
+.MatrixSVG {
+  display: inline-block;
+}
+
+/* If your SVG is too big or small, adjust here */
+.MatrixSVG svg {
+  width: auto;
+  height: auto;
+  max-width: 200px;
+}
+
+/* For tiny standalone matrices (like [a]) */
+.small-matrix svg {
+  max-width: 120px;
+}
+
+
+/* ============================
+   SOURCE LINK STYLE
+============================ */
+.source-link {
+  margin-top: 18px;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.source-link a {
+  color: #1e40af;
+  text-decoration: underline;
 }
